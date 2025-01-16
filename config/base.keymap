@@ -10,6 +10,10 @@
   #define _BT_SEL_KEYS_ &trans &trans &trans &trans &trans
 #endif
 
+// Required to make Unicode symbols work, like Umlaute, see https://github.com/urob/zmk-helpers#dependencies-for-unicode
+// NOTE: Does not work properly, probably ok, since not portable to QMK?
+#define HOST_OS 1
+
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/unicode-chars/greek.dtsi"
 #include "zmk-helpers/unicode-chars/german.dtsi"
@@ -199,13 +203,28 @@ ZMK_CONDITIONAL_LAYER(sys, FN NUM, SYS) // FN + NUM --> SYS.
       ZMK_LAYER(name, LT RT LM RM LB RB LH RH)
 #endif
 
+// Colemack
+// ZMK_BASE_LAYER(Base,
+// //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+//     &kp Q         &kp W         &kp F         &kp P         &kp B       ,   &kp J         &kp L         &kp U         &kp Y         &kp SQT     ,
+// //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+//     &hml LGUI A   &hml LALT R   &hml LSHFT S  &hml LCTRL T  &kp G       ,   &kp M         &hmr LCTRL N  &hmr RSHFT E  &hmr LALT I   &hmr LGUI O ,
+// //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+//     &kp Z         &kp X         &kp C         &kp D         &kp V       ,   &kp K         &kp H         &comma_morph  &dot_morph    &qexcl      ,
+// //╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯
+//                                               &lt_spc NAV 0 &lt FN RET  ,   SMART_NUM     &smart_shft
+// //                                          ╰─────────────┴─────────────╯ ╰─────────────┴─────────────╯
+// )
+
+// Dvorak
+// - exchanged home row mods shift and ctrl
 ZMK_BASE_LAYER(Base,
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-    &kp Q         &kp W         &kp F         &kp P         &kp B       ,   &kp J         &kp L         &kp U         &kp Y         &kp SQT     ,
+    &qexcl        &dot_morph    &comma_morph  &kp P         &kp Y       ,   &kp F         &kp G         &kp C         &kp R         &kp L     ,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &hml LGUI A   &hml LALT R   &hml LSHFT S  &hml LCTRL T  &kp G       ,   &kp M         &hmr LCTRL N  &hmr RSHFT E  &hmr LALT I   &hmr LGUI O ,
+    &hml LGUI A   &hml LALT O   &hml LSHFT E  &hml LCTRL U  &kp I       ,   &kp D         &hmr RCTRL H  &hmr RSHFT T  &hmr RALT N   &hmr RGUI S ,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &kp Z         &kp X         &kp C         &kp D         &kp V       ,   &kp K         &kp H         &comma_morph  &dot_morph    &qexcl      ,
+    &kp SQT         &kp Q         &kp J         &kp K       &kp X       ,   &kp B         &kp M         &kp W         &kp V    &kp Z      ,
 //╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯
                                               &lt_spc NAV 0 &lt FN RET  ,   SMART_NUM     MAGIC_SHIFT
 //                                          ╰─────────────┴─────────────╯ ╰─────────────┴─────────────╯
