@@ -134,3 +134,24 @@ test $testpath *FLAGS:
     if [[ "{{ FLAGS }}" == *"--auto-accept"* ]]; then
         cp ${build_dir}/keycode_events.log ${config_dir}/keycode_events.snapshot
     fi
+
+build-all:
+    just build all -p
+
+cp-adv360-left:
+    just _cp-to ADV360PRO adv360pro_left
+
+cp-adv360-right:
+    just _cp-to ADV360PRO adv360pro_right
+
+_cp-to USB_MOUNTPOINT FIRMWARE_FILE:
+    cp firmware/{{FIRMWARE_FILE}}.uf2 /run/media/mputz/{{USB_MOUNTPOINT}}
+
+_command-loop:
+    #!/usr/bin/env bash
+    while just --choose
+    do
+    echo ''
+    echo 'Press any key to continue loop'
+    read
+    done
