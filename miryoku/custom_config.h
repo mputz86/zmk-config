@@ -3,4 +3,5 @@
 
 #define MIRYOKU_KEYBOARD_ADV360
 #define MIRYOKU_ALPHAS_DVORAK
-#define MIRYOKU_NAV_VI
+// NOTE: With Dvorak, the 'd' and 'moving-left' conflcted often within tmux/neovim
+//#define MIRYOKU_NAV_VI
