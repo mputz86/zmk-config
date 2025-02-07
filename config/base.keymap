@@ -220,11 +220,11 @@ ZMK_CONDITIONAL_LAYER(sys, FN NUM, SYS) // FN + NUM --> SYS.
 // - exchanged home row mods shift and ctrl
 ZMK_BASE_LAYER(Base,
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-    &qexcl        &dot_morph    &comma_morph  &kp P         &kp Y       ,   &kp F         &kp G         &kp C         &kp R         &kp L     ,
+    &qexcl        &dot_morph    &comma_morph  &kp P         &kp Y       ,   &kp F         &kp G         &kp C         &hmr RALT R   &kp L       ,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &hml LGUI A   &hml LALT O   &hml LSHFT E  &hml LCTRL U  &kp I       ,   &kp D         &hmr RCTRL H  &hmr RSHFT T  &hmr RALT N   &hmr RGUI S ,
+    &hml LGUI A   &hml LALT O   &hml LCTRL E  &hml LSHFT U  &kp I       ,   &kp D         &hmr RSHFT H  &hmr RCTRL T  &hmr LALT N   &hmr RGUI S ,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &kp SQT         &kp Q         &kp J         &kp K       &kp X       ,   &kp B         &kp M         &kp W         &kp V    &kp Z      ,
+    &kp SQT         &kp Q         &kp J         &kp K       &kp X       ,   &kp B         &kp M         &kp W         &kp V         &kp Z       ,
 //╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯
                                               &lt_spc NAV 0 &lt FN RET  ,   SMART_NUM     MAGIC_SHIFT
 //                                          ╰─────────────┴─────────────╯ ╰─────────────┴─────────────╯
@@ -244,7 +244,7 @@ ZMK_BASE_LAYER(Nav,
 
 ZMK_BASE_LAYER(Fn,
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-    &kp F12       &kp F7        &kp F8        &kp F9        ___         ,   ___           &kp C_PREV    &kp C_VOL_UP  &kp C_NEXT    ___         ,
+    &kp F12       &kp F7        &kp F8        &kp F9        &kp PSCRN   ,   &kp C_REWIND  &kp C_PREV    &kp C_VOL_UP  &kp C_NEXT    &kp C_FAST_FORWARD ,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &hml LGUI F11 &hml LALT F4  &hml LSHFT F5 &hml LCTRL F6 ___         ,   ___           DSK_PREV      VOL_DOWN      DSK_NEXT      ___         ,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
