@@ -1,6 +1,13 @@
-// Copyright 2023 Manna Harbour
-// https://github.com/manna-harbour/miryoku
+#define CONFIG_WIRELESS
 
-#include "../miryoku/custom_config.h"
-#include "../miryoku/mapping/76/adv360.h"
-#include "../miryoku/miryoku.dtsi"
+#define ZMK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                                      \
+    ZMK_LAYER(                                                                                    \
+        name,                                                                                     \
+        &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4    &kp N5 &none                                            &none     &kp N6 &kp N7 &kp N8   &kp N9   &kp N0   &kp MINUS \
+        &kp TAB   LT                                           &none                                            &kp PSCRN RT                                       &kp BSLH \
+        &kp ESC   LM                                           &none    &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL  &kp INS   RM                                       &kp SQT \
+        &kp LSHFT LB                                           &kp HOME                                         &kp PG_UP RB                                       &kp RSHFT \
+        &none     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT LH                        &kp END  &kp PG_DN RH                          &kp UP &kp DOWN &kp LBKT &kp RBKT &none) 
+
+#include "zmk-helpers/key-labels/adv360_custom.h"
+#include "base.keymap"
