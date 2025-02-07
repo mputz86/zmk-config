@@ -144,6 +144,12 @@ cp-adv360-left:
 cp-adv360-right:
     just _cp-to ADV360PRO adv360pro_right
 
+cp-chocofi-left:
+    just _cp-to NICENANO tukon_left-nice_nano_v2
+
+cp-chocofi-right:
+    just _cp-to NICENANO tukon_right-nice_nano_v2
+
 _cp-to USB_MOUNTPOINT FIRMWARE_FILE:
     cp firmware/{{FIRMWARE_FILE}}.uf2 /run/media/mputz/{{USB_MOUNTPOINT}}
 

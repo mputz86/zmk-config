@@ -68,16 +68,16 @@
     "zephyr": {
       "flake": false,
       "locked": {
-        "lastModified": 1737409464,
-        "narHash": "sha256-tJGeBp8EJBisbYwFQEMDuE1Cq/wcQ0UHOKNntJnS0dQ=",
-        "owner": "zmkfirmware",
+        "lastModified": 1738924677,
+        "narHash": "sha256-lKUjSI75zXQPhN1lmS6065GF9zosj6G7PuIBHy2DF/I=",
+        "owner": "mputz86",
         "repo": "zephyr",
-        "rev": "2ab1279768cc852172074994f73227dbfc58ca54",
+        "rev": "e47b8a4a9d45a655d6247ffab9f509f060d97a7d",
         "type": "github"
       },
       "original": {
-        "owner": "zmkfirmware",
-        "ref": "v3.5.0+zmk-fixes",
+        "owner": "mputz86",
+        "ref": "v3.5.0+zmk-fixes+power",
         "repo": "zephyr",
         "type": "github"
       }

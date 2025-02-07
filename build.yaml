@@ -15,3 +15,8 @@
 include:
   - board: adv360pro_left
   - board: adv360pro_right
+  # NOTE: Requires merging of some changes in the ZMK and Zypher repos
+  - board: "nice_nano_v2"
+    shield: "tukon_left"
+  - board: "nice_nano_v2"
+    shield: "tukon_right"

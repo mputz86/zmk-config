@@ -22,6 +22,8 @@ manifest:
     revision: v0.1 # Pin everything to v0.1
 
   remotes:
+    - name: mputz86
+      url-base: https://github.com/mputz86
     - name: urob
       url-base: https://github.com/urob
     - name: zmkfirmware
@@ -30,8 +32,12 @@ manifest:
   projects:
     # This is vanilla ZMK - just using my remote to pin the current state of main,
     # as upstream hasn't yet released a version with mouse.
+    # - name: zmk
+    #   revision: v0.1+mouse
+    #   import: app/west.yml
     - name: zmk
-      revision: v0.1+mouse
+      remote: mputz86
+      revision: v0.1+mouse+power
       import: app/west.yml
 
     # ZMK modules
@@ -40,6 +46,8 @@ manifest:
     - name: zmk-auto-layer
       path: modules/zmk/auto-layer
     - name: zmk-helpers
+      remote: mputz86
+      revision: fix-adv360-mapping
       path: modules/zmk/helpers
     - name: zmk-leader-key
       revision: v0.1+locality
@@ -50,7 +58,8 @@ manifest:
     # Temporarily overload Zephyr until
     # https://github.com/zmkfirmware/zephyr/pull/40 is merged.
     - name: zephyr
-      revision: v3.5.0+zmk-fixes
+      remote: mputz86
+      revision: v3.5.0+zmk-fixes+power
       clone-depth: 1
       import:
         # Only enable most commonly used boards. For less common hardware one
