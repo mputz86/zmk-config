@@ -1,13 +1,22 @@
 // Copyright 2022 Manna Harbour
 // https://github.com/manna-harbour/miryoku
 
+// https://github.com/urob/zmk-config?tab=readme-ov-file#timeless-homerow-mods
+// https://zmk.dev/docs/customization
 / {
   behaviors {
     u_mt: u_mt {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
-      tapping-term-ms = <U_TAPPING_TERM>;
-      flavor = "tap-preferred";
+      //tapping-term-ms = <U_TAPPING_TERM>;
+      //flavor = "tap-preferred";
+      flavor = "balanced";
+      tapping-term-ms = <280>;
+      quick-tap-ms = <175>;
+      require-prior-idle-ms = <150>;
+      bindings = <&kp>, <&kp>;
+      //hold-trigger-key-positions = <KEYS_R THUMBS>;
+      hold-trigger-on-release;
       bindings = <&kp>, <&kp>;
     };
     u_lt: u_lt {
