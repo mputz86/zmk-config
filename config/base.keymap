@@ -220,11 +220,11 @@ ZMK_CONDITIONAL_LAYER(sys, FN NUM, SYS) // FN + NUM --> SYS.
 // - exchanged home row mods shift and ctrl
 ZMK_BASE_LAYER(Base,
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-    &qexcl        &dot_morph    &comma_morph  &kp P         &kp Y       ,   &kp F         &kp G         &kp C         &hmr RALT R   &kp L       ,
+    &qexcl        &dot_morph    &comma_morph  &kp P         &kp Y       ,   &kp F         &kp G         &kp C         &kp R         &kp L       ,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &hml LGUI A   &hml LALT O   &hml LCTRL E  &hml LSHFT U  &kp I       ,   &kp D         &hmr RSHFT H  &hmr RCTRL T  &hmr LALT N   &hmr RGUI S ,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &kp SQT         &kp Q         &kp J         &kp K       &kp X       ,   &kp B         &kp M         &kp W         &kp V         &kp Z       ,
+    &kp SQT         &kp Q         &kp J         &kp K       &kp X       ,   &kp B         &kp M         &kp W         &hmr RALT V   &kp Z       ,
 //╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯
                                               &lt_spc NAV 0 &lt FN RET  ,   SMART_NUM     MAGIC_SHIFT
 //                                          ╰─────────────┴─────────────╯ ╰─────────────┴─────────────╯
